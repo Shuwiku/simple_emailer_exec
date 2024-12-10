@@ -50,6 +50,4 @@ def parse_args() -> Namespace:
         nargs="*"
     )
 
-    logger.debug("Аргументы командной строки получены.")  # Логирование
-
     return parser.parse_args()

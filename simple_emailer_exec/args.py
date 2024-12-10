@@ -7,11 +7,10 @@ from typing import Optional
 
 from loguru import logger
 
-from args_parser import parse_args
-
 
 def load_args(
-    email_config: dict
+    email_config: dict,
+    parsed_args: Namespace
 ) -> SimpleNamespace:
     """Обрабатывает аргументы, переданные из командной строки.
 
@@ -24,7 +23,6 @@ def load_args(
             email_type (str), recipient_email (str), other (dict).
     """
     args = SimpleNamespace()
-    parsed_args: Namespace = parse_args()
 
     email_name: Optional[str] = parsed_args.e
     if email_name is None:
