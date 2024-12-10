@@ -21,8 +21,12 @@ def load_argsenv() -> SimpleNamespace:
     argsenv = SimpleNamespace()
     load_dotenv()
 
-    sender_email: Optional[str] = os.getenv("SENDER_EMAIL")
-    sender_password: Optional[str] = os.getenv("SENDER_PASSWORD")
+    sender_email: Optional[str] = os.getenv(
+        key="SENDER_EMAIL"
+    )
+    sender_password: Optional[str] = os.getenv(
+        key="SENDER_PASSWORD"
+    )
     if sender_email is None or sender_password is None:
         logger.error(  # Логирование
             "Адрес электронной почты или пароль приложения не указан!"
@@ -35,4 +39,3 @@ def load_argsenv() -> SimpleNamespace:
     logger.debug("Параметры из переменных среды загружены")  # Логирование
 
     return argsenv
-

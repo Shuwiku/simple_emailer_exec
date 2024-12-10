@@ -22,12 +22,18 @@ def get_email_text(
     """
     email_file_path: Path = Path("emails").resolve() / email_data["filename"]
 
-    with open(email_file_path, mode="r", encoding="utf-8") as f:
+    with open(
+        file=email_file_path,
+        mode="r",
+        encoding="utf-8"
+    ) as f:
         email_text: str = f.read()
         logger.debug("Текст письма получен.")  # Логирование
 
     if email_data["with_args"]:
-        jinja_template = Template(email_text)
+        jinja_template = Template(
+            source=email_text
+        )
         email_text: str = jinja_template.render(other_args)
         logger.debug("Текст письма отформатирован.")  # Логирование
 

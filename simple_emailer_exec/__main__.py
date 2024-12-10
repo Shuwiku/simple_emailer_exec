@@ -17,13 +17,18 @@ from setup_logging import setup_logging
 
 def main() -> None:
     """If __name__ == "__main__"."""
-
     parsed_args: Namespace = parse_args()
 
     config: SimpleNamespace = load_config()
-    setup_logging(config.logging)
 
-    args: SimpleNamespace = load_args(config.emails, parsed_args)
+    setup_logging(
+        logging_config=config.logging
+    )
+
+    args: SimpleNamespace = load_args(
+        email_config=config.emails,
+        parsed_args=parsed_args
+    )
     argsenv: SimpleNamespace = load_argsenv()
 
     email_text = get_email_text(

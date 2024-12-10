@@ -3,8 +3,6 @@
 
 from argparse import ArgumentParser, Namespace
 
-from loguru import logger
-
 
 def parse_args() -> Namespace:
     """Получает аргументы, переданные из командной строки."""

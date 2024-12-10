@@ -3,15 +3,15 @@
         "_default": "example_without_args",
         "example_with_args": {
             "filename": "example_with_args.html",
-            "with_args": true,
             "subject": "С днем рождения!",
-            "type": "html"
+            "type": "html",
+            "with_args": true
         },
         "example_without_args": {
             "filename": "example_without_args.html",
-            "with_args": false,
             "subject": "Добро пожаловать в нашу компанию!",
-            "type": "html"
+            "type": "html",
+            "with_args": false
         }
     },
     "logging": {

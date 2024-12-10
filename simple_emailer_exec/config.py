@@ -16,7 +16,11 @@ def load_config() -> SimpleNamespace:
     config = SimpleNamespace()
 
     config_path: Path = Path("config.json").resolve()
-    with open(config_path, mode="r", encoding="utf-8") as f:
+    with open(
+        file=config_path,
+        mode="r",
+        encoding="utf-8"
+    ) as f:
         config_data: dict = json.load(f)
 
     config.emails = config_data["emails"]

@@ -35,7 +35,7 @@ def load_args(
         email_subject = email_config[email_name]["subject"]
     else:
         # Логирование
-        logger.debug(f"Иное значение для параметра: {email_subject = }")
+        logger.debug(f"Иное значение для параметра: {email_subject=}")
     args.email_subject = email_subject
 
     email_type: Optional[str] = parsed_args.t
@@ -43,7 +43,7 @@ def load_args(
         email_type = email_config[email_name]["type"]
     else:
         # Логирование
-        logger.debug(f"Иное значение для параметра: {email_type = }")
+        logger.debug(f"Иное значение для параметра: {email_type=}")
     args.email_type = email_type
 
     args.recipient_email = parsed_args.r
