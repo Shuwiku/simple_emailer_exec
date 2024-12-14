@@ -1,10 +1,13 @@
 [tool.poetry]
 name = "simple-emailer-exec"
 version = "0.1.0"
-description = ""
-authors = ["Shuwiku <shuwiku@gmail.com>"]
-license = "MIT"
+description = "Утилита, позволяющая отправлять письма из терминала по протоколу SMTP Gmail."
+authors = [
+    "Shuwiku <shuwiku@gmail.com>"
+]
 readme = "README.md"
+license = "MIT"
+repository = "https://github.com/Shuwiku/simple_emailer_exec"
 
 [tool.poetry.dependencies]
 python = "^3.12"
